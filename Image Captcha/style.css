@@ -1,0 +1,86 @@
+:root {
+  --grad: linear-gradient(to bottom right, #ffeb3b, #e91e63);
+  --clip: polygon(52% 65%, 100% 38%, 100% 0, 0 0, 0% 38%);
+  --shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  --c: #eaeaea;
+  --g: #74d800;
+}
+@font-face {
+  src: url("q.ttf");
+  font-family: f;
+}
+body {
+  font-family: f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grad {
+  clip-path: var(--clip);
+  background-image: var(--grad);
+  height: 120vh;
+  width: 100%;
+  position: fixed;
+}
+.body {
+  width: 300px;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--c);
+}
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.head_text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+}
+
+.head_ico {
+  height: 50px;
+  width: 40px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.main_body {
+  display: ruby-base-container;
+  grid-template-columns: repeat(3);
+  grid-template-rows: repeat(3);
+  grid-gap: 0px;
+  padding: 25px;
+}
+.i {
+  width: 80px;
+  height: 80px;
+}
+.btm {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+button {
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: red;
+  padding: 10px;
+  font-family: f;
+  border: none;
+  outline: none;
+}
+button:hover {
+  opacity: 0.5;
+}
+.text {
+  display: none;
+}
